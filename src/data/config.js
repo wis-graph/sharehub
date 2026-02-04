@@ -1,0 +1,66 @@
+export default {
+  sidebar: {
+    show: true,
+    position: 'left',
+    width: '280px',
+    title: 'ShareHub',
+    logo: null,
+    navigation: [
+      {
+        id: 'home',
+        label: 'Home',
+        icon: 'home',
+        path: '#/',
+        active: true
+      },
+      {
+        id: 'moc',
+        label: 'MOCs',
+        icon: 'folder',
+        type: 'divider',
+        items: [
+          {
+            id: 'tech',
+            label: 'Tech',
+            path: '#/_moc-tech.md'
+          },
+          {
+            id: 'life',
+            label: 'Life',
+            path: '#/_moc-life.md'
+          }
+        ]
+      },
+      {
+        id: 'about',
+        label: 'About',
+        icon: 'info',
+        path: '#/about'
+      }
+    ]
+  },
+  layout: {
+    header: {
+      show: true,
+      title: true,
+      search: true,
+      themeToggle: true
+    },
+    footer: {
+      show: true,
+      content: '© 2026 ShareHub'
+    }
+  },
+  theme: {
+    primaryColor: 'primary',
+    darkMode: false,
+    rounded: 'medium',
+    shadow: 'soft'
+  },
+  github: {
+    owner: 'your-username',
+    repo: 'your-repo',
+    branch: 'main',
+    homeMoc: '_home.md'
+  }
+};

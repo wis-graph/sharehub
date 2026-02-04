@@ -1,0 +1,136 @@
+/* ========================================
+   ShareHub Custom Styles
+   사용자가 UI를 커스터마이즈할 수 있는 영역
+   ======================================== */
+
+/* 사이드바 스타일 */
+.sidebar {
+  /* 배경색 (기본: 흰색) */
+  --sidebar-bg: #ffffff;
+  /* 텍스트 색상 */
+  --sidebar-text: #1f2937;
+  /* 보더 색상 */
+  --sidebar-border: #e5e7eb;
+  /* 호버 색상 */
+  --sidebar-hover: #f3f4f6;
+  /* 활성 색상 */
+  --sidebar-active: #e0f2fe;
+  /* 활성 텍스트 색상 */
+  --sidebar-active-text: #0284c7;
+}
+
+/* 네비게이션 아이템 */
+.nav-item {
+  --nav-item-padding: 0.75rem 1rem;
+  --nav-item-radius: 0.375rem;
+  --nav-item-transition: all 0.2s ease;
+}
+
+/* 헤더 스타일 */
+.header {
+  --header-bg: #ffffff;
+  --header-border: #e5e7eb;
+  --header-height: 64px;
+}
+
+/* 노트 뷰어 스타일 */
+.note-viewer {
+  --note-bg: #ffffff;
+  --note-padding: 2rem;
+  --note-max-width: 800px;
+}
+
+/* 마크다운 스타일 */
+.markdown {
+  --markdown-heading-font: 'Inter', -apple-system, sans-serif;
+  --markdown-body-font: 'Inter', -apple-system, sans-serif;
+  --markdown-line-height: 1.75;
+}
+
+/* 내부 링크 스타일 */
+.internal-link {
+  --internal-link-color: #0284c7;
+  --internal-link-hover: #0369a1;
+  --internal-link-decoration: underline;
+}
+
+/* 대시보드 카드 스타일 */
+.dashboard-card {
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --card-radius: 0.5rem;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --card-hover-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 다크 모드 오버라이드 */
+@media (prefers-color-scheme: dark) {
+  .sidebar {
+    --sidebar-bg: #1f2937;
+    --sidebar-text: #f9fafb;
+    --sidebar-border: #374151;
+    --sidebar-hover: #374151;
+    --sidebar-active: #374151;
+    --sidebar-active-text: #60a5fa;
+  }
+
+  .header {
+    --header-bg: #1f2937;
+    --header-border: #374151;
+  }
+
+  .note-viewer {
+    --note-bg: #1f2937;
+  }
+
+  .dashboard-card {
+    --card-bg: #1f2937;
+    --card-border: #374151;
+  }
+}
+
+/* ========================================
+   Tailwind 오버라이드 예시
+   ======================================== */
+
+/* 사이드바 너비 조절 */
+.sidebar-container {
+  width: var(--sidebar-width, 280px);
+}
+
+/* 헤더 높이 조절 */
+.header-container {
+  height: var(--header-height, 64px);
+}
+
+/* 노트 뷰어 최대 너비 */
+.note-content {
+  max-width: var(--note-max-width, 800px);
+}
+
+/* ========================================
+   사용자 커스터마이즈 예시
+   ======================================== */
+
+/* 예: 사이드바 배경색 변경 */
+/*
+.sidebar-container {
+  background-color: #your-color;
+}
+*/
+
+/* 예: 내부 링크 스타일 변경 */
+/*
+.internal-link {
+  color: #your-color;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+*/
+
+/* 예: 대시보드 카드 레이아웃 변경 */
+/*
+.dashboard-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+*/
